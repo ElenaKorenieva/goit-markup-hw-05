@@ -244,48 +244,6 @@ body {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-.backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.2);
-    opacity: 1;
-    transition: opacity 250ms var(--timing-function);
-}
-
-.backdrop.is-hidden {
-    opacity: 0;
-    pointer-events: none;
-}
-
-.backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) scale(1.1);
-}
-
-
-.modal {
-    display: flex;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 528px;
-    min-height: 581px;
-    background-color: var(--primary-white-color);
-    transform: translate(-50%, -50%) scale(1);
-    transition: transform 250ms var(--timing-function);
-}
-
-.backdrop_btn {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-}
 /* Features section */
 .features {
     padding-bottom: 47px;
@@ -618,6 +576,51 @@ body {
     fill: var(--primary-white-color);
 }
 
+/* Backdrop and modal window */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: opacity 250ms var(--timing-function), visibility 250ms var(--timing-function);
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+
+.modal {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 528px;
+    min-height: 581px;
+    background-color: var(--primary-white-color);
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms var(--timing-function);
+}
+
+.backdrop_btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 /*PORTFOLIO PAGE */
 
 /* Projects section */
@@ -678,11 +681,6 @@ body {
     transition: opacity 250ms var(--timing-function);
 }
 
-.portfolio-list__link:hover .portfolio-list__thumb,
-.portfolio-list__link:focus .portfolio-list__thumb {
-    opacity: 1;
-}
-
 .portfolio-list__item:nth-child(3n) {
     margin-right: 0;
 }
@@ -701,7 +699,6 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(33, 150, 243, 0.9);
-    /* opacity: 0; */
     transform: translateY(0);
     transition: transform 250ms var(--timing-function);
 }
