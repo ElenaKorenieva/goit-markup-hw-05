@@ -80,7 +80,7 @@ body {
 }
 
 .header__item:not(:last-child) {
-    padding-right: 46px;
+    margin-right: 46px;
 }
 
 .header__link {
