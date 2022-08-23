@@ -29,7 +29,17 @@ html {
   *::before,
   *::after {
     box-sizing: inherit;
-}  
+}
+
+a:hover,
+a:focus {
+    cursor: pointer;
+}
+
+button:hover,
+button:focus {
+    cursor: pointer;
+}
 
 body {
     color: var(--title-text-color);
@@ -343,12 +353,12 @@ body {
     align-items: center;
     justify-content: center;
     background: rgba(47, 48, 58, 0.8);
+    font-weight: 700;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 1.14;
     text-align: center;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    text-align: center;
     color: var(--primary-white-color);
 }
 
@@ -620,8 +630,16 @@ body {
     right: 8px;
     width: 30px;
     height: 30px;
+    background-color: var(--primary-white-color);
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
+    transform: background-color 250ms var(--timing-function);
+
+}
+
+.backdrop_btn:hover,
+.backdrop_btn:focus {
+    background-color: var(--accent-color);
 }
 
 /*PORTFOLIO PAGE */
