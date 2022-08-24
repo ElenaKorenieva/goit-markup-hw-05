@@ -633,13 +633,16 @@ body {
     background-color: var(--primary-white-color);
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    transform: background-color 250ms var(--timing-function);
+    transform: background-color 250ms var(--timing-function),
+    border-color 250ms var(--timing-function);
+    ;
 
 }
 
 .backdrop_btn:hover,
 .backdrop_btn:focus {
     background-color: var(--accent-color);
+    border-color: var(--accent-color);
 }
 
 /*PORTFOLIO PAGE */
