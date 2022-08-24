@@ -645,14 +645,7 @@ body {
     border-color: var(--accent-color);
 }
 
-.backdrop__icon {
-    transform: fill 250ms var(--timing-function)
-}
-
-.backdrop__btn:hover .backdrop__icon,
-.backdrop__btn:focus .backdrop__icon {
-    fill: var(--primary-white-color);
-}
+ 
 
 /*PORTFOLIO PAGE */
 
